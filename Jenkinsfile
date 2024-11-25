@@ -1,6 +1,8 @@
 pipeline{
     agent any
     tools{
+        gradle 'gradle'
+    }
         stages{
             stage('clone repository'){
                 steps{
@@ -19,4 +21,3 @@ pipeline{
             }
         }
     }
-}
