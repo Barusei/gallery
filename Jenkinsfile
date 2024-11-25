@@ -7,7 +7,7 @@ pipeline{
                     git branch: 'master', url: 'https://github.com/Barusei/gallery.git'
                 }
             }
-            stage('build'){
+            stage('build1'){
                 steps{
                     sh 'gradle build'
                 }
