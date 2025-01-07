@@ -6,17 +6,17 @@ pipeline{
         stages{
             stage('clone repository'){
                 steps{
-                    git branch: 'master', url: 'https://github.com/Barusei/gallery.git'
+                    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Barusei/gallery.git']])
                 }
             }
             stage('build'){
                 steps{
-                    sh 'gradle build 3'
+                    sh 'gradle build'
                 }
             }
             stage('test'){
                 steps{
-                    sh 'gradle testing'
+                    sh 'gradle test'
                 }
             }
         }
