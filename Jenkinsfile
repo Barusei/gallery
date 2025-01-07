@@ -1,6 +1,5 @@
 pipeline{
     agent any
-    tools {Nodejs 'node'}
     stages{
         stage('clone repository'){
             steps{
@@ -9,13 +8,14 @@ pipeline{
         }
         stage('build'){
             steps{
-                git 'https://github.com/Barusei/gallery.git'
+             Nodejs('node')
                 sh 'npm install'
                 sh 'node server.js'
             }
         }
         stage('test'){
             steps{
+               Nodejs('node') 
                 sh 'npm run rest'
             }
         }
