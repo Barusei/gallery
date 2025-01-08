@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
 .env
 _config.js
+=======
+node_modules/
+>>>>>>> test
 =======
 node_modules/
 >>>>>>> test
